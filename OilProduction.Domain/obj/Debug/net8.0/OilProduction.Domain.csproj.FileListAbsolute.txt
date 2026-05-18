@@ -1,0 +1,11 @@
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\bin\Debug\net8.0\OilProduction.Domain.deps.json
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\bin\Debug\net8.0\OilProduction.Domain.dll
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\bin\Debug\net8.0\OilProduction.Domain.pdb
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\obj\Debug\net8.0\OilProduction.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\obj\Debug\net8.0\OilProduction.Domain.AssemblyInfoInputs.cache
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\obj\Debug\net8.0\OilProduction.Domain.AssemblyInfo.cs
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\obj\Debug\net8.0\OilProduction.Domain.csproj.CoreCompileInputs.cache
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\obj\Debug\net8.0\OilProduction.Domain.dll
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\obj\Debug\net8.0\refint\OilProduction.Domain.dll
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\obj\Debug\net8.0\OilProduction.Domain.pdb
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Domain\obj\Debug\net8.0\ref\OilProduction.Domain.dll

@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/API/">
+    <Project Path="OilProducation.Api/OilProducation.Api.csproj" Id="e9a09cfa-4fa4-4f1f-9b0b-491c6be18aa1" />
+  </Folder>
+  <Folder Name="/src/core/">
+    <Project Path="OilProduction.Application/OilProduction.Application.csproj" />
+    <Project Path="OilProduction.Domain/OilProduction.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="OilProduction.Persistence/OilProduction.Persistence.csproj" Id="7f8060c3-358e-412e-aefa-eb995401aa41" />
+  </Folder>
+  <Folder Name="/src/UI/" />
+  <Folder Name="/test/" />
+</Solution>

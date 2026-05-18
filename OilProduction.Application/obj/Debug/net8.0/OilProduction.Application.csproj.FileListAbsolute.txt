@@ -1,0 +1,15 @@
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\bin\Debug\net8.0\OilProduction.Application.deps.json
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\bin\Debug\net8.0\OilProduction.Application.dll
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\bin\Debug\net8.0\OilProduction.Application.pdb
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\bin\Debug\net8.0\OilProduction.Domain.dll
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\bin\Debug\net8.0\OilProduction.Domain.pdb
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\OilProduction.Application.csproj.AssemblyReference.cache
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\OilProduction.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\OilProduction.Application.AssemblyInfoInputs.cache
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\OilProduction.Application.AssemblyInfo.cs
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\OilProduction.Application.csproj.CoreCompileInputs.cache
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\OilProdu.ABAE7F72.Up2Date
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\OilProduction.Application.dll
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\refint\OilProduction.Application.dll
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\OilProduction.Application.pdb
+F:\backend\improve_oil_production\OilProduction.Domain\OilProduction.Application\obj\Debug\net8.0\ref\OilProduction.Application.dll
