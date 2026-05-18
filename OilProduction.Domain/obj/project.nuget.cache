@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ppyDAANhGfs=",
+  "dgSpecHash": "uqeNrGzp3FU=",
   "success": true,
-  "projectFilePath": "F:\\backend\\improve_oil_production\\OilProduction.Domain\\OilProduction.Domain\\OilProduction.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.23\\microsoft.windowsdesktop.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.23\\microsoft.netcore.app.ref.8.0.23.nupkg.sha512",
-    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.23\\microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512"
-  ],
+  "projectFilePath": "F:\\backend\\improve_oil_production\\OilProduction.Domain\\Oil_Repo\\OilProduction.Domain\\OilProduction.Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
