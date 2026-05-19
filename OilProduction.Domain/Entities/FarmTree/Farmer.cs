@@ -4,6 +4,7 @@
     {
         public string Name { get; set; }
         public string Adderss { get; set; }
+        public ICollection<Farm> Farms { get; set; } = [];
 
     }
 }
