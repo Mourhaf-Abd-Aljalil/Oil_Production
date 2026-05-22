@@ -1,12 +1,12 @@
-﻿using OilProduction.Domain;
+﻿using OilProduction.Domain.Entities.WorkTeam;
 
 
 namespace OilProduction.Application.Contracts
 {
-    public interface IWorkRepository : IAsyncRepository<WorkModel>
+    public interface IWorkRepository : IDbOperationService
     {
-        Task DeleteAsync(WorkModel work);
-        Task<IReadOnlyList<WorkModel>> GetAllWorksAsync(bool includeJob = false);
-        Task<WorkModel> GetWorkByIdAsync(int id , bool includeJob = false);
+      
+        Task<IReadOnlyList<Worker>> GetAllWorksAsync(bool includeJob = false);
+        Task<Worker> GetWorkByIdAsync(int id , bool includeJob = false);
     }
 }

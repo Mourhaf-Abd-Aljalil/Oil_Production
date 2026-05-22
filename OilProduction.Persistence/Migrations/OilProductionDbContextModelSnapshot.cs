@@ -698,34 +698,27 @@ namespace OilProduction.Persistence.Migrations
                     b.Property<long>("JobId")
                         .HasColumnType("bigint");
 
-                    b.Property<long?>("JobId1")
-                        .HasColumnType("bigint");
+                   
 
                     b.Property<long>("TeamId")
                         .HasColumnType("bigint");
 
-                    b.Property<long?>("TeamId1")
-                        .HasColumnType("bigint");
 
                     b.Property<long>("WorkId")
                         .HasColumnType("bigint");
 
-                    b.Property<long?>("WorkId1")
-                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
                     b.HasIndex("JobId");
 
-                    b.HasIndex("JobId1");
 
                     b.HasIndex("TeamId");
 
-                    b.HasIndex("TeamId1");
+          
 
                     b.HasIndex("WorkId");
 
-                    b.HasIndex("WorkId1");
 
                     b.ToTable("TeamWorkJobs");
                 });
@@ -999,9 +992,6 @@ namespace OilProduction.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("OilProduction.Domain.Entities.WorkTeam.Job", null)
-                        .WithMany("TeamWorkJobModels")
-                        .HasForeignKey("JobId1");
 
                     b.HasOne("OilProduction.Domain.Entities.WorkTeam.Team", "Team")
                         .WithMany()
@@ -1009,9 +999,6 @@ namespace OilProduction.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("OilProduction.Domain.Entities.WorkTeam.Team", null)
-                        .WithMany("TeamWorkJobs")
-                        .HasForeignKey("TeamId1");
 
                     b.HasOne("OilProduction.Domain.Entities.WorkTeam.Work", "Work")
                         .WithMany()
@@ -1019,9 +1006,6 @@ namespace OilProduction.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("OilProduction.Domain.Entities.WorkTeam.Work", null)
-                        .WithMany("TeamWorkJobModels")
-                        .HasForeignKey("WorkId1");
 
                     b.Navigation("Job");
 

@@ -1,11 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using OilProduction.Application.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace OilProduction.Application.Features.WorkService.Commands.DeleteWork
 {
@@ -25,7 +21,9 @@ namespace OilProduction.Application.Features.WorkService.Commands.DeleteWork
         {
             var work = await _WorkRepository.GetWorkByIdAsync(request.Id);
 
-            await _WorkRepository.DeleteAsync(work);
+            work.IsValid = false;
+
+            await _WorkRepository.SaveAsync();
 
             return Unit.Value;
         }

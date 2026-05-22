@@ -1,6 +1,6 @@
 ﻿namespace OilProduction.Domain.Entities.WorkTeam
 {
-    public class Work : BaseModel
+    public class Worker : BaseModel
     {
         public long JobId { get; set; }
         public Job Job { get; set; }

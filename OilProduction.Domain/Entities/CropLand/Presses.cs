@@ -2,7 +2,7 @@
 
 namespace OilProduction.Domain.Entities.CropLand
 {
-    public class Presses
+    public class Presses : BaseModel
     {
         public string Name { get; set; }
         public double Capacity { get; set; }

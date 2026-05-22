@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using OilProduction.Application.Contracts;
-using OilProduction.Domain;
+using OilProduction.Domain.Entities.WorkTeam;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +23,7 @@ namespace OilProduction.Application.Features.WorkService.Commands.UpdateWork
 
         public async Task<Unit> Handle(UpdateWorkCommand request, CancellationToken cancellationToken)
         {
-            WorkModel work = _mapper.Map<WorkModel>(request);
+            Worker work = _mapper.Map<Worker>(request);
 
             await _WorkRepository.UpdateAsync(work);
 

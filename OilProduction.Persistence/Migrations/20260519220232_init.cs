@@ -286,9 +286,6 @@ namespace OilProduction.Persistence.Migrations
                     JobId = table.Column<long>(type: "bigint", nullable: false),
                     WorkId = table.Column<long>(type: "bigint", nullable: false),
                     TeamId = table.Column<long>(type: "bigint", nullable: false),
-                    JobId1 = table.Column<long>(type: "bigint", nullable: true),
-                    TeamId1 = table.Column<long>(type: "bigint", nullable: true),
-                    WorkId1 = table.Column<long>(type: "bigint", nullable: true),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsValid = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -301,33 +298,21 @@ namespace OilProduction.Persistence.Migrations
                         principalTable: "Jobs",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_TeamWorkJobs_Jobs_JobId1",
-                        column: x => x.JobId1,
-                        principalTable: "Jobs",
-                        principalColumn: "Id");
+                   
                     table.ForeignKey(
                         name: "FK_TeamWorkJobs_Teams_TeamId",
                         column: x => x.TeamId,
                         principalTable: "Teams",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_TeamWorkJobs_Teams_TeamId1",
-                        column: x => x.TeamId1,
-                        principalTable: "Teams",
-                        principalColumn: "Id");
+                 
                     table.ForeignKey(
                         name: "FK_TeamWorkJobs_Works_WorkId",
                         column: x => x.WorkId,
                         principalTable: "Works",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_TeamWorkJobs_Works_WorkId1",
-                        column: x => x.WorkId1,
-                        principalTable: "Works",
-                        principalColumn: "Id");
+                
                 });
 
             migrationBuilder.CreateTable(
@@ -667,30 +652,19 @@ namespace OilProduction.Persistence.Migrations
                 table: "TeamWorkJobs",
                 column: "JobId");
 
-            migrationBuilder.CreateIndex(
-                name: "IX_TeamWorkJobs_JobId1",
-                table: "TeamWorkJobs",
-                column: "JobId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TeamWorkJobs_TeamId",
                 table: "TeamWorkJobs",
                 column: "TeamId");
 
-            migrationBuilder.CreateIndex(
-                name: "IX_TeamWorkJobs_TeamId1",
-                table: "TeamWorkJobs",
-                column: "TeamId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TeamWorkJobs_WorkId",
                 table: "TeamWorkJobs",
                 column: "WorkId");
 
-            migrationBuilder.CreateIndex(
-                name: "IX_TeamWorkJobs_WorkId1",
-                table: "TeamWorkJobs",
-                column: "WorkId1");
+   
 
             migrationBuilder.CreateIndex(
                 name: "IX_TeamWorks_TeamId",

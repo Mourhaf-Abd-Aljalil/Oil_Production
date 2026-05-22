@@ -3,7 +3,7 @@ using OilProduction.Application.Features.WorkService.Commands.CreateWork;
 using OilProduction.Application.Features.WorkService.Commands.UpdateWork;
 using OilProduction.Application.Features.WorkService.Queries.GetWorkDetail;
 using OilProduction.Application.Features.WorkService.Queries.GetWorksList;
-using OilProduction.Domain;
+using OilProduction.Domain.Entities.WorkTeam;
 
 
 namespace OilProduction.Application.Mapper
@@ -12,10 +12,10 @@ namespace OilProduction.Application.Mapper
     {
         public AutoMapper()
         {
-            CreateMap<WorkModel, WorkRequest>().ReverseMap();
-            CreateMap<WorkModel, WorksListRequest>().ReverseMap();
-            CreateMap<WorkModel, CreateWorkCommand>().ReverseMap();
-            CreateMap<WorkModel, UpdateWorkCommand>().ReverseMap();
+            CreateMap<Worker, WorkRequest>().ReverseMap();
+            CreateMap<Worker, WorksListRequest>().ReverseMap();
+            CreateMap<Worker, CreateWorkCommand>().ReverseMap();
+            CreateMap<Worker, UpdateWorkCommand>().ReverseMap();
 
         }
     }

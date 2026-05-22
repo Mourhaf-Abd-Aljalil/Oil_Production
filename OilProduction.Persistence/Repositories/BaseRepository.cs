@@ -2,11 +2,12 @@
 
 using Microsoft.EntityFrameworkCore;
 using OilProduction.Application.Contracts;
+using OilProduction.Domain.Entities;
 using OilProduction.Persistence.Data;
 
 namespace OilProduction.Persistence.Repositories
 {
-    public class BaseRepository<T> : IAsyncRepository<T> where T : class
+    public class BaseRepository<T> : IDbOperationService
     {
         private readonly OilProductionDbContext _context;
 
@@ -15,52 +16,41 @@ namespace OilProduction.Persistence.Repositories
             _context = context;
         }
 
-        public async Task AddAsync(T Entity)
+
+        public async Task BeginTransactionAsync()
         {
-            await _context.Set<T>().AddAsync(Entity);
-            await _context.SaveChangesAsync();
-            
-            //if (Entity == null)
-            //{
-            //    return false;
-            //}
-            //try
-            //{
-            //    _context.Set<T>().AddAsync(T);
-            //    await _context.SaveChangesAsync();
-            //    return true;
-            //}
-            //catch (Exception ex)
-            //{
-            //    {
-            //        Console.WriteLine(ex.ToString());
-            //    }
-            //    return false;
-            //}
+            await _context.Database.BeginTransactionAsync();
         }
 
-        public async Task DeleteAsync(int Id)
+        public async Task CommitAsync()
         {
-            var Entity = await _context.Set<T>().FindAsync(Id);
-            _context.Set<T>().Remove(Entity);
+            await _context.Database.CommitTransactionAsync();
+        }
+
+        public async Task RollBackAsync()
+        {
+            await _context.Database.RollbackTransactionAsync();
+        }
+
+        public async Task SaveAsync()
+        {
             await _context.SaveChangesAsync();
         }
 
-        public async Task<T> GetByIdAsync(int Id)
+        public async Task AddAsync<TModel>(TModel model) where TModel : BaseModel
         {
-            return await _context.Set<T>().FindAsync(Id);
+            await _context.Set<TModel>().AddAsync(model);
         }
 
-        public async Task<IReadOnlyList<T>> ListAllAsync()
+        public async Task AddRangeAsync<TModel>(IEnumerable<TModel> models) where TModel : BaseModel
         {
-            return await _context.Set<T>().ToListAsync();
+            await _context.Set<TModel>().AddRangeAsync(models);
         }
 
-        public async Task UpdateAsync(T Entity)
+        public IQueryable<TModel> Set<TModel>() where TModel : BaseModel
         {
-            _context.Set<T>().Update(Entity);
-            await _context.SaveChangesAsync();
+            return _context.Set<TModel>().AsQueryable();
         }
 
-      }
+    }
 }

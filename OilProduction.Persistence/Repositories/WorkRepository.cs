@@ -1,16 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OilProduction.Application.Contracts;
-using OilProduction.Domain;
+using OilProduction.Domain.Entities.WorkTeam;
 using OilProduction.Persistence.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OilProduction.Persistence.Repositories
 {
-    public class WorkRepository : BaseRepository<WorkModel>, IWorkRepository
+    public class WorkRepository : BaseRepository<Worker>, IWorkRepository
     {
         private readonly OilProductionDbContext _context;
         public WorkRepository(OilProductionDbContext context) : base(context) 
@@ -18,26 +13,26 @@ namespace OilProduction.Persistence.Repositories
 
         }
 
-        public async Task DeleteAsync(WorkModel work)
+        public async Task DeleteAsync(Worker work)
         {
           await DeleteAsync(work);
         }
 
-        public async Task<IReadOnlyList<WorkModel>> GetAllWorksAsync(bool includeJob = false)
+        public async Task<IReadOnlyList<Worker>> GetAllWorksAsync(bool includeJob = false)
         {
-            List<WorkModel> Works = new List<WorkModel>();
+            List<Worker> Works = new List<Worker>();
 
             Works = includeJob ? await _context.Works.Include(J => J.Job).ToListAsync() : await _context.Works.ToListAsync();
 
             return Works;
         }
 
-        public async Task<WorkModel> GetWorkByIdAsync(int id, bool includeJob = false)
+        public async Task<Worker> GetWorkByIdAsync(int id, bool includeJob = false)
         {
             
-            WorkModel Work = new WorkModel();
+            Worker Work = new Worker();
 
-            Work = includeJob ? await _context.Works.Include(J => J.Job).FirstOrDefaultAsync(x => x.Id == id) : await GetByIdAsync(id);
+            Work = includeJob ? await _context.Set<Worker>().Include(J => J.Job).FirstOrDefaultAsync(x => x.Id == id) : await _context.Set<Worker>().FirstOrDefaultAsync(e => e.Id == id);
 
             return Work;
             

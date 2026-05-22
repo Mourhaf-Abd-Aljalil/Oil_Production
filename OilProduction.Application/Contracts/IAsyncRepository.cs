@@ -1,14 +1,17 @@
 ﻿
 
+using OilProduction.Domain.Entities;
+
 namespace OilProduction.Application.Contracts
 {
-    public interface IAsyncRepository<T> where T : class 
+    public interface IDbOperationService
     {
-        Task<T> GetByIdAsync(int Id);
-        Task<IReadOnlyList<T>> ListAllAsync();
-        Task AddAsync(T Entity);
-        Task UpdateAsync(T Entity);
-        Task DeleteAsync(int Id);
-
+        Task BeginTransactionAsync();
+        Task RollBackAsync();
+        Task CommitAsync();
+        Task SaveAsync();
+        Task AddAsync<TModel>(TModel model) where TModel : BaseModel;
+        Task AddRangeAsync<TModel>(IEnumerable<TModel> models) where TModel : BaseModel;
+        IQueryable<TModel> Set<TModel>() where TModel : BaseModel;
     }
 }

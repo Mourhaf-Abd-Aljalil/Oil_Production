@@ -5,7 +5,7 @@
         public long JobId { get; set; }
         public Job Job { get; set; }
         public long WorkId { get; set; }
-        public Work Work { get; set; }
+        public Worker Work { get; set; }
         public long TeamId { get; set; }
         public Team Team { get; set; }
     }

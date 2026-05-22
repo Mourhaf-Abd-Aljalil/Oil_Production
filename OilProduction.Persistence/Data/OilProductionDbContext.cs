@@ -15,7 +15,7 @@ namespace OilProduction.Persistence.Data
         {
 
         }
-        public DbSet<Work> Works { get; set; }
+        public DbSet<Worker> Works { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Crop> Crops { get; set; }
         public DbSet<Description> Descriptions { get; set; }
