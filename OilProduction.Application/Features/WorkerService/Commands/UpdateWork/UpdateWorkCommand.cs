@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace OilProduction.Application.Features.WorkService.Commands.UpdateWork
 {
-    public class UpdateWorkCommand : IRequest
+    public class UpdateWorkCommand 
     {
-        public int Id { get; set; }
+        public int WorkerId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
-        public int JobId { get; set; }
+   
     }
 }
